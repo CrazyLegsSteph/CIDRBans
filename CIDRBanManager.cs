@@ -161,8 +161,8 @@ namespace CIDRbans
                     }
                 }
                 //Start removing everything in prepared list
-                foreach (string remove in removelist)
-                    db.Query("DELETE FROM CIDRBans WHERE CIDR = @0", remove);
+                foreach (string removed in removelist)
+                    db.Query("DELETE FROM CIDRBans WHERE CIDR = @0", removed);
                 //Inform players
                 return removelist;
             }
@@ -218,7 +218,7 @@ namespace CIDRbans
         /// </summary>
         /// <param name="check">IP to check</param>
         /// <param name="cidr">CIDR Range</param>
-        /// <returns></returns>
+        /// <returns>Match Success</returns>
         public static bool Check(string check, string cidr)
         {
             const uint defaultmask = 0xffffffff;
