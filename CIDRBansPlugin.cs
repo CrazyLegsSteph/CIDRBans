@@ -10,7 +10,7 @@ using TShockAPI;
 
 namespace CIDRbans
 {
-    [ApiVersion(1, 18)]
+    [ApiVersion(1, 19)]
     public class CIDRBansPlugin : TerrariaPlugin
     {
         /// <summary>Plugin Name string</summary>
